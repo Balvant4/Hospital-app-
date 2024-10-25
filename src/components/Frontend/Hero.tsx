@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+
+import Link from "next/link";
 import SearchBar from "./SearchBar";
 import TransitionText from "./Texttransition";
 
@@ -26,15 +27,15 @@ const Hero = () => {
               {/* cta btn */}
               <ul className="flex flex-wrap items-center">
                 <li>
-                  <a
+                  <Link
                     href="/#"
                     className="inline-flex items-center justify-center rounded-md bg- px-6 py-3 text-center text-base font-medium  hover:bg-blue-dark lg:px-7 text-gray-50 bg-blue-500"
                   >
                     Need Doctor Urgently
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/#"
                     className="inline-flex items-center justify-center px-5 py-3 text-center text-base font-medium text-[#464646] hover:text-primary "
                   >
@@ -68,7 +69,7 @@ const Hero = () => {
                       </svg>
                     </span>
                     Download App
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -127,13 +128,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-const SingleImage = ({ href, imgSrc }: { href: string; imgSrc: string }) => {
-  return (
-    <>
-      <a href={href} className="flex w-full items-center justify-center">
-        <img src={imgSrc} alt="brand image" className="h-10 w-full" />
-      </a>
-    </>
-  );
-};
